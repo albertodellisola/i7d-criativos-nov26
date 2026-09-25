@@ -3,7 +3,7 @@
 import json, re, html, os
 D = os.path.dirname(os.path.abspath(__file__))
 CONS = os.path.expanduser('~/i7d-copywriting/pecas/2026-09-15_meta-100-imagens/')
-antigo = open(os.environ['ANTIGO']).read()
+antigo = open(os.environ.get('ANTIGO', os.path.join(D,'.legendas_antigas.html'))).read()
 NO_AR = {'D01-01','D03-01','D05-08','D06-03','N07','N24'}
 e = html.escape
 
